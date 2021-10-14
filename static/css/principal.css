@@ -24,7 +24,8 @@ html{
 .servicios,
 .promociones,
 .nosotross,
-.formulario{
+.formulario,
+.footer{
     scroll-snap-align:center;
     scroll-snap-stop: always;
 }
@@ -54,24 +55,16 @@ h1,h2,h3{
     text-align:center;
 }
 
-/* Incio del callAction */
-@media(min-width:540px){
-    .contenedor{
-        display:grid;
-        grid-template-columns: 0fr 1fr;
-        column-gap: 2rem;
-        max-width: 120rem;
-        margin: 0 auto 0 auto; /* top, right, bottom, left */
-    }
- }
 
-.contenedor .imgHead{
-    height: 9rem;
-    width: 10rem;
+/* Incio del callAction */
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto; /* top, right, bottom, left */
 }
 
 .titulo{
     color: var(--primario);
+    text-align:start;
 }
 
 .titulo span{
@@ -254,7 +247,7 @@ h1,h2,h3{
     color: var(--blanco);
 }
 
-@media (min-width: 40px) {
+@media (min-width: 540px) {
     .contenedor-campos{
         display: grid;
         grid-template-columns:1fr 1fr;
