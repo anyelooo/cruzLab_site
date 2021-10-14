@@ -1,0 +1,295 @@
+/* Eeste es una propiedad customizada */
+:root{ 
+    /* Definienco mi variables de colores */
+    --blanco: #ffffff;
+    --oscuro:#202021;
+    --primario: #263673;
+    --secuendario: #00913f;
+    --serviceTitle:#304390;
+    --gris:#757575;
+    --descuento:#cf1020;
+
+    /* Definienfo mis variables de medida */
+    --fuente--principal:3.8rem;
+    --type--fuente:Arial,Helvetica,sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+.contenedor,
+.servicios,
+.promociones,
+.nosotross,
+.formulario{
+    scroll-snap-align:center;
+    scroll-snap-stop: always;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size:16px;
+    font-family:var(--type--fuente);
+}
+
+h1{
+    font-size:var(--fuente--principal);
+}
+
+h2{
+    font-size:2.8rem;
+}
+
+h3{
+    font-size:1.8;
+}
+
+h1,h2,h3{
+    text-align:center;
+}
+
+/* Incio del callAction */
+@media(min-width:540px){
+    .contenedor{
+        display:grid;
+        grid-template-columns: 0fr 1fr;
+        column-gap: 2rem;
+        max-width: 120rem;
+        margin: 0 auto 0 auto; /* top, right, bottom, left */
+    }
+ }
+
+.contenedor .imgHead{
+    height: 9rem;
+    width: 10rem;
+}
+
+.titulo{
+    color: var(--primario);
+}
+
+.titulo span{
+    font-size: 2rem;
+    color:var(--oscuro);
+}
+
+
+.hero{
+    background-image:url(../img/medic1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 410px;
+    padding:20px;
+    position:relative;  /* El padre dede tener una posicion relativa para que el hijo deba tener uan posicion absoluta */
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);  /* Definimos la trasparencia */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:0;
+    /* 
+        -Las lineas de arriba se puedes suplir con solo dos lineas:
+            width:100%
+            height:100%
+        -Con esas dos lineas toma todo el valor de seccion de la clase
+    */
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.boton{
+    background-color: var(--secuendario);
+    color:var(--blanco);
+    padding: 1rem 3rem;
+    margin-top:3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform:uppercase; /* Nos pone el texto en mayuscaulas */
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+ @media(min-width:540px){
+     .boton{
+         width: auto;
+     }
+ }
+
+ .boton:hover{
+     cursor: pointer;
+ }
+
+.contenido-hero h2,
+.contenido-hero p{
+    color:var(--blanco);
+
+}
+
+/* Inicio servicios */
+@media(min-width:540px){
+    .servicios{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+ }
+
+/* Servicio */
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--serviceTitle);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 1.5;
+    text-align: center;
+}
+
+.servicio .imgServ{
+    height: 6rem;
+    width: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Inicio promociones */
+@media(min-width:540px){
+    .promociones{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+ }
+
+.promocion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promocion h3{
+    color: var(--descuento);
+    font-weight: normal;
+}
+
+.promocion p{
+    line-height: 1.5;
+    text-align: center;
+}
+
+.promocion .imgDes{
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Inicio Nosotros */
+
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros h3{
+    color: var(--primario);
+    font-weight: normal;
+}
+
+.nosotros p{
+    max-width: 50rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Formulario */
+.contenedor-form{
+    max-width: 120rem;
+    margin: 0 auto 0 auto; /* top, right, bottom, left */
+}
+
+.formulario{
+    background-color: var(--gris);
+     width: min(60rem, 100%);  /* utiliza el valor más pequeño*/
+     margin: 0 auto;
+     padding: 2rem;
+     border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight:700;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 40px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column:1/3;
+    }   
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--white);
+    font-weight:bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius:.5rem;
+}
+
+/* footer */
+.footer{
+    text-align: center;
+}
